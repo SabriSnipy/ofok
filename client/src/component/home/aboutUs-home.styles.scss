@@ -1,0 +1,64 @@
+/* Start About Us Area css
+============================================================================================ */
+.about_area {
+	.about_thumb {
+		overflow: hidden;
+		display: inline-block;
+	}
+
+	@media (max-width: 991px) {
+		.about_content {
+			text-align: center;
+		}
+	}
+
+	.about_content {
+		h2 {
+			font-size: 36px;
+			margin-bottom: 30px;
+			@media (max-width: 767px) {
+				font-size: 25px;
+			}
+			br {
+				@media (max-width: 1199px) {
+					display: none;
+				}
+			}
+		}
+		p {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+		.primary_btn {
+			margin-top: 35px;
+		}
+	}
+
+	.about_left {
+		padding-right: 0;
+		padding-left: 30px;
+		@media (max-width: 991px) {
+			padding-right: 15px;
+			margin-top: 0px;
+			margin-bottom: 40px;
+		}
+	}
+	.about_right {
+		padding: 110px 60px;
+		background: #ffffff;
+		margin-top: 70px;
+		margin-left: -40px;
+		z-index: 2;
+		box-shadow: 0px 5px 40px rgba(153, 153, 153, 0.2);
+		@media (max-width: 1199px) {
+			padding: 50px 30px;
+		}
+		@media (max-width: 991px) {
+			margin-left: 0;
+			margin-top: 20px;
+		}
+	}
+}
+/* End About Us Area css
+============================================================================================ */

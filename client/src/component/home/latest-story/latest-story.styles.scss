@@ -1,0 +1,67 @@
+$text-color: #777777;
+$title-color: #222222;
+@mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s) {
+	transition: $property $duration $animate $delay;
+}
+@mixin transform($value) {
+	transform: $value;
+	-webkit-transform: $value;
+	-moz-transform: $value;
+	-o-transform: $value;
+	-ms-transform: $value;
+}
+$primary-color: #60bc0f;
+
+.story_area {
+	padding-bottom: 100px;
+	@media (max-width: 991px) {
+		padding-bottom: 40px;
+	}
+}
+
+.single-story {
+	margin-bottom: 30px;
+	.story-thumb {
+		position: relative;
+	}
+	.story-details {
+		padding-top: 25px;
+		.story-meta {
+			a {
+				display: inline-block;
+				color: $text-color;
+				border-right: 1px solid #999999;
+				padding-right: 20px;
+				padding-left: 18px;
+				font-size: 14px;
+				&:first-child {
+					padding-left: 0px;
+				}
+				&:last-child {
+					border-right: 0px;
+				}
+			}
+			span {
+				padding-right: 10px;
+				text-transform: uppercase;
+			}
+		}
+		h5 {
+			font-size: 20px;
+			margin-top: 15px;
+			a {
+				color: $title-color;
+				font-size: 18px;
+				line-height: 27px;
+				@include transition();
+			}
+		}
+	}
+	&:hover {
+		h5 {
+			a {
+				color: $primary-color;
+			}
+		}
+	}
+}

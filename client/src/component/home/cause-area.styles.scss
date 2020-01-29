@@ -1,0 +1,46 @@
+/* Start Causes Area css
+============================================================================================ */
+@mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s) {
+	transition: $property $duration $animate $delay;
+}
+@mixin transform($value) {
+	transform: $value;
+	-webkit-transform: $value;
+	-moz-transform: $value;
+	-o-transform: $value;
+	-ms-transform: $value;
+}
+
+.causes_area {
+	padding: 130px 0px 100px;
+	@media (max-width: 991px) {
+		padding: 70px 0px 40px;
+	}
+}
+.single_causes {
+	padding: 50px;
+	border-radius: 5px;
+	box-shadow: none;
+	text-align: center;
+	margin-bottom: 30px;
+	@include transition();
+	background: #f9fafc;
+	@media (max-width: 575px) {
+		padding: 50px 10px;
+	}
+	img {
+		margin-bottom: 35px;
+	}
+	h4 {
+		font-size: 20px;
+		margin-bottom: 40px;
+	}
+	p {
+		margin-bottom: 0px;
+	}
+	&:hover {
+		box-shadow: 0px 20px 30px rgba(153, 153, 153, 0.2);
+	}
+}
+/* End Causes Area css
+============================================================================================ */

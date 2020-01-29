@@ -1,0 +1,43 @@
+{
+  "name": "ofok-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "test": "mocha unitTests/**/*.js",
+    "start": "node server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"cross-env NODE_ENV=development npm start\" \"npm run client\"",
+    "testProdInDev": "concurrently \"cross-env NODE_ENV=production npm start\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SabriSnipy/ofok.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SabriSnipy/ofok/issues"
+  },
+  "homepage": "https://github.com/SabriSnipy/ofok#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "helmet": "^3.21.2",
+    "http": "0.0.0",
+    "mongoose": "^5.8.10",
+    "path": "^0.12.7",
+    "x-xss-protection": "^1.3.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0"
+  }
+}
