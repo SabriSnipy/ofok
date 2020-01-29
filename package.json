@@ -15,8 +15,6 @@
     "dev": "concurrently \"cross-env NODE_ENV=development npm start\" \"npm run client\"",
     "testProdInDev": "concurrently \"cross-env NODE_ENV=production npm start\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
