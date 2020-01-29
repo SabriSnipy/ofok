@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const helmet = require("helmet");
 var compression = require("compression");
-
+let express = require ('express');
 const bodyParser = require("body-parser");
 var cors = require("cors");
 let path = require("path");
@@ -12,7 +12,7 @@ var http = require("http");
 
 const server = http.createServer(app);
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 
 if (process.env.NODE_ENV === "production") {
