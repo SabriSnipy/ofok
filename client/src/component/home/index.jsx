@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import HomeBanner from './home-banner-area.component';
 import CauseArea from './cause-area.component';
 import AboutUsHome from './aboutUs-home.component';
@@ -8,7 +8,11 @@ import Volonteers from './volonteer/volonteer.component';
 import BecomeAVolunteer from './becomeAVolunteer.component';
 import LatestStoryHome from './latest-story/latest-story.component';
 
-const Home = () =>(
+const Home = () =>{
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
+    return(
     <React.Fragment>
         <HomeBanner/>
         <CauseArea/>
@@ -19,6 +23,6 @@ const Home = () =>(
         <BecomeAVolunteer/>
         <LatestStoryHome/>
     </React.Fragment>
-)
+)}
 
 export default Home;

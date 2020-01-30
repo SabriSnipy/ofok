@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import "./header.styles.scss";
 
@@ -28,7 +29,7 @@ class Header extends React.Component {
 						<div className="container">
 							<nav className="navbar navbar-expand-lg navbar-light">
 								<div className="container">
-									<a className="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""/></a>
+									<Link to="/" className="navbar-brand logo_h"><img src="img/logo.png" alt=""/></Link>
 									<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 										<span className="icon-bar"></span>
 										<span className="icon-bar"></span>
@@ -36,7 +37,7 @@ class Header extends React.Component {
 									</button>
 									<div className="collapse navbar-collapse offset" id="navbarSupportedContent">
 										<ul className="nav navbar-nav menu_nav ml-auto">
-											<li className="nav-item active"><a className="nav-link" href="index.html">Home</a></li> 
+											<li className="nav-item active"><Link to="/" className="nav-link">Home</Link></li> 
 											<li className="nav-item"><a className="nav-link" href="about-us.html">About</a></li> 
 											<li className="nav-item"><a className="nav-link" href="causes.html">Causes</a></li>
 											<li className="nav-item submenu dropdown">
@@ -55,7 +56,7 @@ class Header extends React.Component {
 													<li className="nav-item"><a className="nav-link" href="single-blog.html">Blog Details2</a></li>
 												</ul>
 											</li> 
-											<li className="nav-item"><a className="nav-link" href="contact.html">Contact</a></li>
+											<li className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></li>
 										</ul>
 									</div> 
 								</div>
