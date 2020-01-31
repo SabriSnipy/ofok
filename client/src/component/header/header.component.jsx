@@ -1,12 +1,19 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {connect} from "react-redux";
+import {CHANGEHEADERLINK} from "../../redux/actions/actions";
 
 import "./header.styles.scss";
 
+
 class Header extends React.Component {
-	state={
-		theposition:0
+	constructor(props) {
+		super(props);
+		this.state={
+			theposition:0
+		}
 	}
+	
 	componentDidMount() {
 		window.addEventListener('scroll', this.listenToScroll)
 	  }
@@ -23,6 +30,7 @@ class Header extends React.Component {
 		})
 	  }
 	render(){
+		let {CHANGEHEADERLINK, links} = this.props
 		return(
 			<header className={this.state.theposition<100?"header_area":"header_area navbar_fixed"}>
 					<div className="main_menu">
@@ -37,8 +45,8 @@ class Header extends React.Component {
 									</button>
 									<div className="collapse navbar-collapse offset" id="navbarSupportedContent">
 										<ul className="nav navbar-nav menu_nav ml-auto">
-											<li className="nav-item active"><Link to="/" className="nav-link">Home</Link></li> 
-											<li className="nav-item"><a className="nav-link" href="about-us.html">About</a></li> 
+											<li className={links.home?"nav-item active":"nav-item"}><Link to="/" className="nav-link" onClick={()=>CHANGEHEADERLINK({home:true,contactUs:false,aboutUs:false})}>Home</Link></li> 
+											<li className={links.aboutUs?"nav-item active":"nav-item"}><Link to="about-us" className="nav-link" onClick={()=>CHANGEHEADERLINK({home:false,contactUs:false,aboutUs:true})}>About</Link></li> 
 											<li className="nav-item"><a className="nav-link" href="causes.html">Causes</a></li>
 											<li className="nav-item submenu dropdown">
 												<a href="/" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
@@ -56,7 +64,7 @@ class Header extends React.Component {
 													<li className="nav-item"><a className="nav-link" href="single-blog.html">Blog Details2</a></li>
 												</ul>
 											</li> 
-											<li className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></li>
+											<li className={links.contactUs?"nav-item active":"nav-item"}><Link to="/contact" className="nav-link" onClick={()=>CHANGEHEADERLINK({home:false,contactUs:true,aboutUs:false})}>Contact</Link></li>
 										</ul>
 									</div> 
 								</div>
@@ -67,6 +75,10 @@ class Header extends React.Component {
 		)
 	}
 }
+function mapStateToProps(state) {
+	return{
+		links : state.header.links
+	}	
+}
 
-
-export default Header;
+export default connect(mapStateToProps, {CHANGEHEADERLINK})(Header);

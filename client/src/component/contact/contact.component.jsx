@@ -2,6 +2,7 @@ import React,{useEffect, useState } from 'react';
 import axios from "axios";
 
 import "./contact.styles.scss";
+import BannerArea from '../banner-area.component';
 
 const Contact = () =>{
     const [name , setName] = useState("")
@@ -47,6 +48,10 @@ const Contact = () =>{
         })
             setSucces(true)
             setErrorMessage(res.data.message)
+            setName("")
+            setEmail("")
+            setSubject("")
+            setMessage("")
             setTimeout(() => {
                 setErrorMessage("")
                 setSucces(false)
@@ -63,17 +68,8 @@ const Contact = () =>{
     }
     
     return <React.Fragment>
-        <section className="banner_area">
-        <div className="banner_inner d-flex align-items-center">
-            <div className="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-            <div className="container">
-                <div className="banner_content text-center">
-                    <h2>Contact Us</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+       
+    <BannerArea text="Contact Us"/>
     <section className="contact_area section_gap">
         <div className="container">
             <div id="mapBox" className="mapBox" 
