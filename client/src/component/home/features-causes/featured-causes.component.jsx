@@ -35,14 +35,14 @@ const carts = [
 ]
 
 const FeaturedCausesHome = () =>(
-    <section class="features_causes">
-		<div class="container">
-			<div class="main_title">
+    <section className="features_causes">
+		<div className="container">
+			<div className="main_title">
 				<h2>Featured causes</h2>
 				<p>Creepeth called face upon face yielding midst is after moveth </p>
 			</div>
 
-			<div class="row">
+			<div className="row">
 				{carts.map(({image, title, text, donors, raised, goal},i)=><CauseCart key={i} image={image} title={title} text={text} donors={donors} raised={raised} goal={goal}/>)}
 			</div>
 		</div>

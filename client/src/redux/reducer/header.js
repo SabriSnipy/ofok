@@ -1,11 +1,14 @@
 import {
     CHANGE_HEADER_LINK
 } from '../actions/types';
+
+let url = window.location.pathname
+
 const DEAFAULT_STATE={
     links:{
-        home:true,
-        aboutUs:false, 
-        contactUs:false,
+        home:url === "/"?true:false,
+        aboutUs:url === "/about-us"?true:false, 
+        contactUs:url === "/contact"?true:false,
     } 
    }
 

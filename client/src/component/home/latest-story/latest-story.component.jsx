@@ -9,11 +9,11 @@ import LatestStoryCart from './latest-story-cart.component';
 const images = [ReactComponent1, ReactComponent2, ReactComponent3]
 
 const LatestStoryHome = () =>(
-<section class="section_gap story_area">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-7">
-					<div class="main_title">
+<section className="section_gap story_area">
+		<div className="container">
+			<div className="row justify-content-center">
+				<div className="col-lg-7">
+					<div className="main_title">
 						<h2>Our latest Story</h2>
 						<p>
 							Open lesser winged midst wherein may morning
@@ -21,7 +21,7 @@ const LatestStoryHome = () =>(
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div className="row">
                 {images.map((el,i)=><LatestStoryCart key={i} image={el}/>)}
 			</div>
 		</div>

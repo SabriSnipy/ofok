@@ -50,13 +50,13 @@ const volonteers = [
 ]
 
 const Volonteers = () =>(
-    <section class="team_area section_gap">
-		<div class="container">
-			<div class="main_title">
+    <section className="team_area section_gap">
+		<div className="container">
+			<div className="main_title">
 				<h2>Meet our voluteer</h2>
 				<p>Creepeth called face upon face yielding midst is after moveth </p>
 			</div>
-			<div class="row team_inner">
+			<div className="row team_inner">
                 {volonteers.map(({name, image, position, description, facebook, twitter, instagram, mail},i)=>
                     <VolonteerCart key={i} name={name} image={image} position={position} description={description} facebook={facebook} twitter={twitter} instagram={instagram} mail={mail} />
                 )}

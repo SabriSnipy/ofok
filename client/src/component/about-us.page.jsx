@@ -4,7 +4,7 @@ import AboutUsHome from './home/aboutUs-home.component';
 import Volonteers from './home/volonteer/volonteer.component';
 import BecomeAVolunteer from './home/becomeAVolunteer.component';
 
-const AboutUs = ({text}) =>{
+const AboutUs = () =>{
     useEffect(()=>{
         window.scrollTo(0,0)
     },[])

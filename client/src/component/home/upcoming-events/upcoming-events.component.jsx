@@ -45,14 +45,14 @@ const carts = [
 ]
 
 const UpcomingEventsHome = () =>(
-    <section class="event_area section_gap_custom">
-		<div class="container">
-			<div class="main_title">
+    <section className="event_area section_gap_custom">
+		<div className="container">
+			<div className="main_title">
 				<h2>Upcoming events</h2>
 				<p>Creepeth called face upon face yielding midst is after moveth </p>
 			</div>
 		
-			<div class="row">
+			<div className="row">
 				{carts.map(({image, title, text, days, hours, minutes, seconds},i)=><UpcomingCart key={i} image={image} title={title} text={text} days={days} hours={hours} minutes={minutes} seconds={seconds} />)}
             </div>
 		</div>

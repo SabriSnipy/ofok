@@ -1,19 +1,19 @@
 import React from 'react';
 
 const LatestStoryCart = ({image}) =>(
-    <div class="col-lg-4 col-md-6">
-        <div class="single-story">
-            <div class="story-thumb">
-                <img class="img-fluid" src={image} alt=""/>
+    <div className="col-lg-4 col-md-6">
+        <div className="single-story">
+            <div className="story-thumb">
+                <img className="img-fluid" src={image} alt=""/>
             </div>
-            <div class="story-details">
-                <div class="story-meta">
+            <div className="story-details">
+                <div className="story-meta">
                     <a href="/">
-                        <span class="lnr lnr-calendar-full"></span>
+                        <span className="lnr lnr-calendar-full"></span>
                         20th Sep, 2018
                     </a>
                     <a href="/">
-                        <span class="lnr lnr-book"></span>
+                        <span className="lnr lnr-book"></span>
                         Company
                     </a>
                 </div>
