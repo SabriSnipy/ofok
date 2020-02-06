@@ -1,11 +1,11 @@
 process.env.NODE_ENV = 'test';
-let user=require('./user');
-let reclamation= require ('./reclamation');
-
 
 describe('USER_API', ()=>{
-    // user()
-    // reclamation()
+    it('it should POST an offer with all fields required', (done) => {
+        console.log("hello")
+        done()
+    }
+    )
 
 });
 
