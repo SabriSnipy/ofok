@@ -2666,7 +2666,13 @@ h6 {
   border-radius: 0px;
   box-shadow: none;
   width: 100%;
-  padding: 10px 0 10px 0px; }
+  padding: 10px 0 10px 0px; 
+  height: 175px;
+  overflow-y: scroll;
+}
+.form-select .nice-select .list::-webkit-scrollbar {
+  color: transparent;
+}
 
 .mt-10 {
   margin-top: 10px; }

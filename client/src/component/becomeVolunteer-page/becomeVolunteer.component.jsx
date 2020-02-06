@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import "./donate-page.styles.scss";
+import "./becomeVolunteer.styles.scss";
 import BannerArea from '../banner-area.component';
 
 
