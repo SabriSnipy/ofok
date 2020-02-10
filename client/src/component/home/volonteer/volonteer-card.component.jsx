@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const VolonteerCart = ({name, image, position, description, facebook, twitter, instagram, mail}) =>(
     <div className="col-lg-3 col-md-6">
@@ -13,10 +14,7 @@ const VolonteerCart = ({name, image, position, description, facebook, twitter, i
                     {description}
                 </p>
                 <div className="social">
-                    <a href={facebook}><i className="fa fa-facebook"></i></a>
-                    <a href={twitter} className="active"><i className="fa fa-twitter"></i></a>
-                    <a href={instagram}><i className="fa fa-instagram"></i></a>
-                    <a href={mail}><i className="fa fa-envelope-o"></i></a>
+                    <Link to="/">Learn more</Link>
                 </div>
             </div>
         </div>

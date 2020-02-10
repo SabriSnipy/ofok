@@ -16,12 +16,13 @@ const Home = () =>{
     <React.Fragment>
         <HomeBanner/>
         <CauseArea/>
-        <AboutUsHome/>
+        <AboutUsHome from="home"/>
+        <Volonteers/>
         <FeaturedCausesHome/>
         <UpcomingEventsHome/>
-        <Volonteers/>
         <BecomeAVolunteer/>
         <LatestStoryHome/>
+        
     </React.Fragment>
 )}
 

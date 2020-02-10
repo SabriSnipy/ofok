@@ -10,7 +10,7 @@ const CauseArea = () =>(
 		<div className="container">
 			<div className="main_title">
 				<h2>Our major causes</h2>
-				<p>Creepeth called face upon face yielding midst is after moveth </p>
+				<p>Why OFOK association exists </p>
 			</div>
 			<div className="row">
 				<div className="col-lg-4 col-md-6">
@@ -18,7 +18,7 @@ const CauseArea = () =>(
 						<h4>Give Donation</h4>
 						<img src={ReactComponent1} alt=""/>
 						<p>
-							It you're. Was called you're fowl grass lesser land together waters beast darkness earth land whose male all moveth fruitful.
+						We give donations to social cases, needy families and students who are unable to continue their education throughout the university years.
 						</p>
 					</div>
 				</div>
@@ -27,16 +27,16 @@ const CauseArea = () =>(
 						<h4>Give Inspiration</h4>
 						<img src={ReactComponent2} alt=""/>
 						<p>
-							It you're. Was called you're fowl grass lesser land together waters beast darkness earth land whose male all moveth fruitful.
+						We give inspiration to children and orphans through a group of clubs that develop their ideas and develop their individual skills.
 						</p>
 					</div>
 				</div>
 				<div className="col-lg-4 col-md-6">
 					<div className="single_causes">
-						<h4>Become Bolunteer</h4>
+						<h4>Become Volunteer</h4>
 						<img src={ReactComponent3} alt=""/>
 						<p>
-							It you're. Was called you're fowl grass lesser land together waters beast darkness earth land whose male all moveth fruitful.
+						The association attracts every volunteer who wants to lend a hand to our children and the families we care for.
 						</p>
 					</div>
 				</div>

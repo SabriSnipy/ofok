@@ -1,9 +1,12 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import {connect} from "react-redux";
+import {CHANGEHEADERLINK} from "../../redux/actions/actions";
 import ReactComponent1 from "./img/about-img.jpg";
 
 import "./aboutUs-home.styles.scss";
 
-const AboutUsHome = () =>(
+const AboutUsHome = ({CHANGEHEADERLINK, from}) =>(
     <section className="about_area section_gap_bottom">
 		<div className="container">
 			<div className="row">	
@@ -16,21 +19,20 @@ const AboutUsHome = () =>(
 					<div className="col-lg-6 col-md-12 about_right">
 						<div className="about_content">
 							<h2>
-								We are nonprofit team <br/>
-									and work worldwide
+								We are nonprofit team
 							</h2>
 							<p>
-									Their multiply doesn't behold shall appear living heaven second 
-									roo lights. Itself hath thing for won't herb forth gathered good 
-									bear fowl kind give fly form winged for reason
+							We seek, as far as possible, the association to work with all 
+							the organizations and associations that share our same goals, 
+							mainly providing a decent living for the individual
 							</p>
 							<p>
-									Land their given the seasons herb lights fowl beast whales it 
-									after multiply fifth under to it waters waters created heaven 
-									very fill agenc to. Dry creepeth subdue them kind night behold 
-									rule stars him grass waters our without 
+							Over the past 9 years, full sponsorship of orphans has occupied 90% of 
+							our interests and we follow the families of orphans at all stages of life 
+							through their care at different levels:
+							Physically, psychologically, healthily, educational and entertaining
 							</p>
-							<a href="/" className="primary_btn">Learn more</a>
+							{from==="home"?<Link to="/about-us" className="primary_btn" onClick={()=>CHANGEHEADERLINK({home:false,contactUs:false,aboutUs:true})}>Learn more</Link>:<div className="m-5"></div>}
 						</div>
 					</div>
 				</div>
@@ -39,4 +41,4 @@ const AboutUsHome = () =>(
 	</section>
 )
 
-export default AboutUsHome
+export default connect(null, {CHANGEHEADERLINK})(AboutUsHome)
