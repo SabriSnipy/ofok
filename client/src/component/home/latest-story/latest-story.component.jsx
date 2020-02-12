@@ -6,7 +6,24 @@ import ReactComponent3 from "./img/s3.jpg";
 import "./latest-story.styles.scss";
 import LatestStoryCart from './latest-story-cart.component';
 
-const images = [ReactComponent1, ReactComponent2, ReactComponent3]
+
+const stories = [
+	{
+		image:ReactComponent1,
+		date:"4th Aug, 2018",
+		description:"Jerusalem is my trust"
+	},
+	{
+		image:ReactComponent2,
+		date:"20th Sep, 2018",
+		description:"Sponsor my studies and consider me as your daughter or son ."
+	},
+	{
+		image:ReactComponent3,
+		date:"14th Oct, 2019",
+		description:"Cleanliness campaign."
+	},
+]
 
 const LatestStoryHome = () =>(
 <section className="section_gap story_area">
@@ -22,7 +39,7 @@ const LatestStoryHome = () =>(
 				</div>
 			</div>
 			<div className="row">
-                {images.map((el,i)=><LatestStoryCart key={i} image={el}/>)}
+                {stories.map((el,i)=><LatestStoryCart key={i} story={el}/>)}
 			</div>
 		</div>
 	</section>

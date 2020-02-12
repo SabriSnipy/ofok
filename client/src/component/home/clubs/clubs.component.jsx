@@ -4,7 +4,7 @@ import ReactComponent1 from "./img/v1.png";
 import ReactComponent2 from "./img/v2.png";
 import ReactComponent3 from "./img/v3.png";
 import ReactComponent4 from "./img/v4.jpeg";
-import VolonteerCart from './volonteer-card.component';
+import ClubsCart from './clubs-card.component';
 
 const volonteers = [
     {
@@ -33,7 +33,7 @@ const volonteers = [
     }
 ]
 
-const Volonteers = () =>(
+const Clubs = () =>(
     <section className="team_area section_gap">
 		<div className="container">
 			<div className="main_title">
@@ -42,11 +42,11 @@ const Volonteers = () =>(
 			</div>
 			<div className="row team_inner">
                 {volonteers.map(({name, image, position, description, facebook, twitter, instagram, mail},i)=>
-                    <VolonteerCart key={i} name={name} image={image} position={position} description={description} facebook={facebook} twitter={twitter} instagram={instagram} mail={mail} />
+                    <ClubsCart key={i} name={name} image={image} position={position} description={description} facebook={facebook} twitter={twitter} instagram={instagram} mail={mail} />
                 )}
             </div>
         </div>
     </section>
 )
 
-export default Volonteers;
+export default Clubs;

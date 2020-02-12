@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const VolonteerCart = ({name, image, position, description, facebook, twitter, instagram, mail}) =>(
+const ClubsCart = ({name, image, position, description, facebook, twitter, instagram, mail}) =>(
     <div className="col-lg-3 col-md-6">
         <div className="team_item">
             <div className="team_img">
@@ -21,4 +21,4 @@ const VolonteerCart = ({name, image, position, description, facebook, twitter, i
     </div>
 )
 
-export default VolonteerCart;
+export default ClubsCart;
