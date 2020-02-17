@@ -12,24 +12,28 @@ const volonteers = [
         name:"Mental arithmetic",
         position:"Maths Club",
         description:"calculations that you do in your mind, without writing down any numbers",
+        link:"/mental-arithmetic"
     },
     {
         image:ReactComponent2,
         name:"Sciences",
         position:"Sciences Club",
         description:"Science Club is an afterschool, mentor-based science program for middle school youth.",
+        link:"/sciences"
     },
     {
         image:ReactComponent3,
         name:"Agriculture",
         position:"Agriculture Club",
         description:"This club is for students interested in  Agriculture and Production Agriculture.",
+        link:"/agriculture"
     },
     {
         image:ReactComponent4,
         name:"Entrepreneurship",
         position:"Entrepreneurship Club",
         description:"This club is an environment where students can cultivate their entrepreneurship skills.",
+        link:"/entrepreneurship"
     }
 ]
 
@@ -41,8 +45,8 @@ const Clubs = () =>(
 				<p>OFOK association sponsors families through a group of clubs </p>
 			</div>
 			<div className="row team_inner">
-                {volonteers.map(({name, image, position, description, facebook, twitter, instagram, mail},i)=>
-                    <ClubsCart key={i} name={name} image={image} position={position} description={description} facebook={facebook} twitter={twitter} instagram={instagram} mail={mail} />
+                {volonteers.map(({name, image, position, description, link},i)=>
+                    <ClubsCart key={i} name={name} image={image} position={position} description={description} link={link} />
                 )}
             </div>
         </div>

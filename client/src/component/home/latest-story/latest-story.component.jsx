@@ -33,7 +33,7 @@ const LatestStoryHome = () =>(
 					<div className="main_title">
 						<h2>Our latest Story</h2>
 						<p>
-							Open lesser winged midst wherein may morning
+						OFOK Association carries out many activities throughout the year
 						</p>
 					</div>
 				</div>

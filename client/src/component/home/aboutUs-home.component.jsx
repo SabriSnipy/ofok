@@ -9,6 +9,10 @@ import "./aboutUs-home.styles.scss";
 const AboutUsHome = ({CHANGEHEADERLINK, from}) =>(
     <section className="about_area section_gap_bottom">
 		<div className="container">
+		<div className="main_title">
+				<h2>About Us</h2>
+				<p>Know more about Ofok Association </p>
+			</div>
 			<div className="row">	
 				<div className="single_about row">
 					<div className="col-lg-6 col-md-12 text-center about_left">

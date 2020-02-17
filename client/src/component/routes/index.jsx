@@ -9,6 +9,8 @@ import Clubs from '../clubs-page/clubs.component';
 import StoriesComponent from '../stories-page';
 import Entrepreneurship from '../clubs-page/entrepreneurship-club/entrepreneurship-club.component';
 import MentalArithmetic from '../clubs-page/mental-arithmetic-club/mental-arithmetic-club.component';
+import AgricultureClub from '../clubs-page/agriculture-club/agriculture-club.component';
+import ScienceClub from '../clubs-page/science-club/science-club.component';
 
 const Routes = () =>(
     <Switch>
@@ -20,6 +22,8 @@ const Routes = () =>(
         <Route exact path="/donate" component={DonatePage}/>
         <Route exact path="/entrepreneurship" component={Entrepreneurship}/>
         <Route exact path="/mental-arithmetic" component={MentalArithmetic}/>
+        <Route exact path="/agriculture" component={AgricultureClub}/>
+        <Route exact path="/sciences" component={ScienceClub}/>
     </Switch>
 )
 

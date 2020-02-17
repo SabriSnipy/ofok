@@ -1,6 +1,6 @@
 import React from 'react';
 import BannerArea from '../banner-area.component';
-import LatestStoryHome from '../home/latest-story/latest-story.component';
+import LatestStory from './latest-stories.component';
 
 const StoriesComponent = () =>{
     React.useEffect(()=>{
@@ -9,7 +9,7 @@ const StoriesComponent = () =>{
     return(
         <React.Fragment>
             <BannerArea text="Our Stories"/>
-            <LatestStoryHome/>
+            <LatestStory/>
         </React.Fragment>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ClubsCart = ({name, image, position, description, facebook, twitter, instagram, mail}) =>(
+const ClubsCart = ({name, image, position, description, link}) =>(
     <div className="col-lg-3 col-md-6">
         <div className="team_item">
             <div className="team_img">
@@ -14,7 +14,7 @@ const ClubsCart = ({name, image, position, description, facebook, twitter, insta
                     {description}
                 </p>
                 <div className="social">
-                    <Link to="/">Learn more</Link>
+                    <Link to={link}>Learn more</Link>
                 </div>
             </div>
         </div>

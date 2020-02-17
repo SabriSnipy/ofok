@@ -9,7 +9,7 @@ const DEAFAULT_STATE={
         home:url === "/"?true:false,
         aboutUs:url === "/about-us"?true:false, 
         contactUs:url === "/contact"?true:false,
-        clubs:url === "/clubs"?true:false,
+        clubs:url === "/clubs" || url === "/sciences" || url === "/mental-arithmetic" || url === "/agriculture" || url === "/entrepreneurship" ?true:false,
         stories:url === "/stories"?true:false,
     } 
    }
