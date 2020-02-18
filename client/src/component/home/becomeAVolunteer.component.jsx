@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import "./becomeAVolunteer.styles.scss"
 
@@ -12,7 +13,7 @@ const BecomeAVolunteer = () =>(
 						So seed seed green that winged cattle in. Gathering thing made fly you're 
 						divided deep leave on the medicene moved us land years living.
 					</p>
-					<a href="/" className="primary_btn yellow_btn rounded">join with us</a>
+					<Link to="/donate" className="primary_btn yellow_btn rounded">join with us</Link>
 				</div>
 			</div>
 		</div>

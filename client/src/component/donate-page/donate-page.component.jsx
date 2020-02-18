@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import "./donate-page.styles.scss";
 import BannerArea from '../banner-area.component';
@@ -35,6 +35,9 @@ const COUNTRIES = ["Afghanistan" ,"Afrique Centrale" ,"Afrique du Sud","Albanie"
                 "Wallis et Futuma","Yemen","Yougoslavie","Zambie","Zimbabwe"]
 
 const DonatePage = () =>{
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     const [open, setOpen] = useState(false)
     const [openCountry, setOpenCountry] = useState(false)
     const [current, setCurrent] = useState("City")

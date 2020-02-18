@@ -10,28 +10,16 @@ const Footer = () =>(
 						<div className="single-footer-widget tp_widgets">
 							<h4 className="footer_title large_title">Our Mission</h4>
 							<p>
-								So seed seed green that winged cattle in. Gathering thing made fly you're no 
-								divided deep moved us lan Gathering thing us land years living.
+							• Providing wholistic care to orphaned and vulnerable children.<br/>
+							• Granting scholarships to low-income students and families.<br/>
+							• We coordinate with Ibn Khaldun clinic to receive cancer patients in OFOK’s guesthouse for the duration of their treatment.<br/>
+							• Running Aid Convoys to empower others to live with greater independence and freedom from poverty, disease, and hunger.<br/>
 							</p>
-							<p>
-								So seed seed green that winged cattle in. Gathering thing made fly you're no divided deep moved 
-							</p>
+							
 						</div>
 					</div>
-					<div className="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
-						<div className="single-footer-widget tp_widgets">
-							<h4 className="footer_title">Quick Links</h4>
-							<ul className="list">
-								<li><a href="/">Home</a></li>
-								<li><a href="/">About</a></li>
-								<li><a href="/">Causes</a></li>
-								<li><a href="/">Event</a></li>
-								<li><a href="/">News</a></li>
-								<li><a href="/">Contact</a></li>
-							</ul>
-						</div>
-					</div>
-					<div className="col-lg-2 col-md-6 col-sm-6">
+					
+					<div className="col-lg-4 col-md-12 col-sm-12 offset-lg-1">
 						<div className="single-footer-widget instafeed">
 							<h4 className="footer_title">Gallery</h4>
 							<ul className="list instafeed d-flex flex-wrap">
@@ -52,15 +40,15 @@ const Footer = () =>(
 									<span className="fa fa-location-arrow"></span>
 									Head Office
 								</p>
-								<p>123, Main Street, Your City</p>
+								<p>Charles De Gaul Street, Hammem Sousse</p>
 	
 								<p className="sm-head">
 									<span className="fa fa-phone"></span>
 									Phone Number
 								</p>
 								<p>
-									+123 456 7890 <br/>
-									+123 456 7890
+								00 (216) 73 364 929 <br/>
+								00 (216) 55 452 272
 								</p>
 	
 								<p className="sm-head">
@@ -68,8 +56,10 @@ const Footer = () =>(
 									Email
 								</p>
 								<p>
-									free@infoexample.com <br/>
-									www.infoexample.com
+								associationofok2011@gmail.com
+ <br/>
+ info@ofok-association.com
+
 								</p>
 							</div>
 						</div>

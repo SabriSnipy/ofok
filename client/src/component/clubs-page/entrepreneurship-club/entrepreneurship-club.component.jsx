@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 // import Gallery from 'react-grid-gallery';
 import ImageGallery from 'react-image-gallery';
 import "./entrepreneurship.styles.scss";
@@ -222,7 +222,9 @@ const IMAGES =
 
 
 const Entrepreneurship = () =>{
-
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     return(
         <React.Fragment>
             <BannerArea text = "Entrepreneurship" />

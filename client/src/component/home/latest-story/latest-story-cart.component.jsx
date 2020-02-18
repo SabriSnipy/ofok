@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import {connect} from "react-redux";
+import {CHANGEHEADERLINK} from "../../../redux/actions/actions";
 
-const LatestStoryCart = ({story}) =>(
+const LatestStoryCart = ({story, CHANGEHEADERLINK}) =>(
     <div className="col-lg-4 col-md-6">
         <div className="single-story">
             <div className="story-thumb">
@@ -17,14 +20,14 @@ const LatestStoryCart = ({story}) =>(
                         Ofok
                     </a>
                 </div>
-                <h5>
-                    <a href="/">
+                <h5  onClick={()=>CHANGEHEADERLINK({home:false,contactUs:false,aboutUs:false,clubs:false, stories:true})}>
+                <Link to={"/stories"+story.link}>
                         {story.description}
-                    </a>
+                 </Link>
                 </h5>
             </div>
         </div>
     </div>
 )
 
-export default LatestStoryCart;
+export default connect(null, {CHANGEHEADERLINK})(LatestStoryCart);

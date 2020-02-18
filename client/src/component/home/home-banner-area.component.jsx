@@ -1,8 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {connect} from "react-redux";
+import {CHANGEHEADERLINK} from "../../redux/actions/actions";
 import "./home-banner-area.styles.scss";
 
-const HomeBanner = () =>(
+const HomeBanner = ({CHANGEHEADERLINK}) =>(
     <section className="home_banner_area">
 		<div className="banner_inner">
 			<div className="container">
@@ -13,10 +15,10 @@ const HomeBanner = () =>(
 						We seek, as far as possible, the association to work with all the organizations and associations that share our same goals, mainly providing a decent living for the individual
 					</p>
 					<Link className="primary_btn mr-20" to="/donate">Donate Now</Link>
-					<a className="primary_btn yellow_btn text-white" href="causes.html">See Causes</a>
+					<Link className="primary_btn yellow_btn text-white" to="/about-us"  onClick={()=>CHANGEHEADERLINK({home:false,contactUs:false,aboutUs:true,clubs:false, stories:false})}>About Us</Link>
 				</div>
 			</div>
 		</div>
 	</section>
 )
-export default HomeBanner;
+export default connect(null,{CHANGEHEADERLINK})(HomeBanner);
