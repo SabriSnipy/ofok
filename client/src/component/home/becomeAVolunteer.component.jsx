@@ -10,8 +10,7 @@ const BecomeAVolunteer = () =>(
 				<div className="col-lg-7">
 					<h1>Become a volunteer</h1>
 					<p>
-						So seed seed green that winged cattle in. Gathering thing made fly you're 
-						divided deep leave on the medicene moved us land years living.
+						You want to give a hand to our association and become a volunteer .
 					</p>
 					<Link to="/donate" className="primary_btn yellow_btn rounded">join with us</Link>
 				</div>

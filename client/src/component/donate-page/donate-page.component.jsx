@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from "axios";
 
 import "./donate-page.styles.scss";
 import BannerArea from '../banner-area.component';
@@ -40,6 +41,7 @@ const DonatePage = () =>{
     },[])
     const [open, setOpen] = useState(false)
     const [openCountry, setOpenCountry] = useState(false)
+    const [openSubject, setOpenSubject] = useState(false)
     const [current, setCurrent] = useState("City")
     const [currentCountry, setCurrentCountry] = useState("Country")
     const [firstName, setFirstName] = useState("")
@@ -49,13 +51,21 @@ const DonatePage = () =>{
     const [address, setAddress] = useState("")
     const [message, setMessage] = useState("")
     const [city, setCity] = useState("")
+    const [subject, setSubject] = useState("Subject")
+    const [errorMessage , setErrorMessage] = useState("")
+    const [success , setSucces] = useState(false)
 
     const openSelect = () =>{
         setOpen(!open)
     }
 
+    const openSubjectHandler = () =>{
+        setOpenSubject(!openSubject)
+    }
+
     const selectCity = (value) =>{
         setCurrent(value)
+        setErrorMessage("")
     }
 
     const openSelectCountry = () =>{
@@ -64,45 +74,100 @@ const DonatePage = () =>{
 
     const selectCountry = (value) =>{
         setCurrentCountry(value)
+        setErrorMessage("")
     }
 
+    const selectSubject = (value) =>{
+        setSubject(value)
+        setErrorMessage("")
+    }
     const handleChange = (event) => {
         switch (event.target.name) {
             case "firstName":
             setFirstName(event.target.value)
+            setErrorMessage("")
             break;
             case "lastName":
             setLastName(event.target.value)
+            setErrorMessage("")
             break;
             case "numTel":
             setNumTel(event.target.value)
+            setErrorMessage("")
             break;
             case "email":
             setEmail(event.target.value)
+            setErrorMessage("")
             break;
             case "address":
             setAddress(event.target.value)
+            setErrorMessage("")
             break;
             case "message":
             setMessage(event.target.value)
+            setErrorMessage("")
             break;
             case "city":
             setCity(event.target.value)
+            setErrorMessage("")
             break;
             default:
             break;
         }
     }
-
+    const handleSubmit = async (event) =>{
+        event.preventDefault()
+        try {
+            let res = await axios({
+            url:"/user/become-a-volunteer",
+            method:"post",
+            data:{
+                firstName, 
+                lastName, 
+                phoneNumber:numTel, 
+                email, 
+                subject, 
+                address, 
+                country:currentCountry, 
+                city : currentCountry === "Tunisie"?current:city, 
+                message
+            }
+        })
+            setSucces(true)
+            setErrorMessage(res.data.message)
+            setFirstName("")
+            setLastName("")
+            setNumTel("")
+            setEmail("")
+            setAddress("")
+            setCurrent("")
+            setCurrentCountry("")
+            setCity("")
+            setSubject("")
+            setMessage("")
+            setTimeout(() => {
+                setErrorMessage("")
+                setSucces(false)
+            }, 3000);
+        } catch (error) {
+            setSucces(false)
+            setErrorMessage(error.response.data.message)
+            setTimeout(() => {
+                setErrorMessage("")
+                setSucces(false)
+            }, 3000);
+        }
+        
+    }
     return <React.Fragment>
        
-    <BannerArea text="Donate Now" />
+    <BannerArea text="Donate Now / Become A Volunteer" />
     <section className="contact_area section_gap">
         <div className="container">
             <h2 className="text-center mb-5">
             Please fill in the fields and send us a message and we will contact you as soon as possible
             </h2>
-    <form action="#">
+    <form onSubmit={handleSubmit}>
         <div className="mt-10">
             <input type="text" name="firstName" placeholder="First Name" value={firstName} required className="single-input" onChange={handleChange}/>
         </div>
@@ -115,10 +180,27 @@ const DonatePage = () =>{
         <div className="mt-10">
             <input type="email" name="email" placeholder="Email" value={email} required className="single-input" onChange={handleChange}/>
         </div>
+
+        <div className="input-group-icon mt-10">
+            <div className="icon"><i className="fa fa-check" aria-hidden="true"></i></div>
+            <div className="form-select" id="default-select2">
+                <div className={openSubject?"nice-select open":"nice-select"} tabIndex="0" onClick={openSubjectHandler}>
+                    <span className="current">{subject}</span>
+                    <ul className="list">
+                        <li className={subject === "Donate"?"option selected focus":"option"} onClick={()=>selectSubject("Donate")}>Donate</li>
+                        <li className={subject === "Become a volunteer"?"option selected focus":"option"} onClick={()=>selectSubject("Become a volunteer")}>Become a volunteer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
         <div className="input-group-icon mt-10">
             <div className="icon"><i className="fa fa-thumb-tack" aria-hidden="true"></i></div>
             <input type="text" name="address" placeholder="Address" value={address} required className="single-input" onChange={handleChange}/>
         </div>
+
+       
 
         <div className="input-group-icon mt-10">
             <div className="icon"><i className="fa fa-globe" aria-hidden="true"></i></div>
@@ -160,7 +242,26 @@ const DonatePage = () =>{
         </div>
         <div className="mt-5 text-right">
             <button type="submit" value="submit" className="btn primary_btn">Send Message</button>
-        </div>    
+        </div>   
+
+        {
+                            success && errorMessage ? 
+                            <div className="alert alert-success col-md-12 text-center mt-5">
+                                {
+                                    errorMessage
+                                }
+                            </div>:
+                            null
+                        }
+                        {
+                            !success && errorMessage ? 
+                            <div className="alert alert alert-danger col-md-12 text-center mt-5">
+                                {
+                                    errorMessage
+                                }
+                            </div>:
+                            null
+                        } 
         </form>
     </div>
     </section>
