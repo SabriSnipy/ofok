@@ -11,7 +11,7 @@ const AboutUsHome = ({CHANGEHEADERLINK, from}) =>(
 		<div className="container">
 		<div className="main_title">
 				<h2>About Us</h2>
-				<p>Know more about Ofok Association </p>
+				<p>To know more about OFOK </p>
 			</div>
 			<div className="row">	
 				<div className="single_about row">
@@ -26,16 +26,9 @@ const AboutUsHome = ({CHANGEHEADERLINK, from}) =>(
 								We are nonprofit team
 							</h2>
 							<p>
-							We seek, as far as possible, the association to work with all 
-							the organizations and associations that share our same goals, 
-							mainly providing a decent living for the individual
+							we seek as far as possible to work with all the organizations that share with us the same objectives and we primarily aim to provide decent living standards for individuals and empower them to live with greater independence and freedom from poverty, disease, and hunger.
 							</p>
-							<p>
-							Over the past 9 years, full sponsorship of orphans has occupied 90% of 
-							our interests and we follow the families of orphans at all stages of life 
-							through their care at different levels:
-							Physically, psychologically, healthily, educational and entertaining
-							</p>
+							
 							{from==="home"?<Link to="/about-us" className="primary_btn" onClick={()=>CHANGEHEADERLINK({home:false,contactUs:false,aboutUs:true})}>Learn more</Link>:<div className="m-5"></div>}
 						</div>
 					</div>

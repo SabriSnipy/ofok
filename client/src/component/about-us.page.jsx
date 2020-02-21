@@ -15,7 +15,8 @@ const AboutUs = () =>{
         <section className="team_area section_gap">
 		<div className="container">
 			<div className="main_title">
-				<h2><span style={{color:"red"}}>Strategy</span> Engage-Educate-Empower</h2>
+				<h2><span style={{color:"red"}}>Vision</span> Strategy</h2>
+                <p>Engage-Educate-Empower</p>
 			</div>
 			<div className="row team_inner">
                 <h3>Emotional</h3>
@@ -32,7 +33,6 @@ const AboutUs = () =>{
                 <p>
                 Orphans have little hope, issues with trust, and receive little guidance in life decisions.
                 OFOK desires for them to understand that making wise life choices that lead to success result from disciplined hard work and unswerving belief.
-                Our desired goal, which encourages a relationship with God through the local church, enables them to find hope, contentment, and purpose
                 </p>
                 
             </div>
@@ -68,13 +68,13 @@ const AboutUs = () =>{
 			<div className="main_title">
 				<h2><span style={{color:"red"}}>Executive</span> Leadership Team</h2>
                 <p>We believe in leading by serving</p>
+                <p>Sometimes you choose your job, but some jobs choose you!</p>
             </div>
 			<div className="row team_inner">
                 <ul>
                     <li>Chief executive officer </li>
                     <li>Financial Assistant</li>
                     <li>Public Relations Assistant</li>
-                    <li>Trainees</li>
                 </ul>
             </div>
         </div>

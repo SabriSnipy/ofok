@@ -57,17 +57,20 @@ const Footer = () =>(
 								</p>
 								<p>
 								associationofok2011@gmail.com
- <br/>
- info@ofok-association.com
+ 								<br/>
+ 								info@ofok-association.com
 
 								</p>
+								
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
+		<p className="text-center m-4" >
+									<strong>RIB  Albaraka Sahloul: 32021788101079121184</strong>
+		</p>
 		<div className="footer-bottom">
 			<div className="container">
 				<div className="row d-flex">
